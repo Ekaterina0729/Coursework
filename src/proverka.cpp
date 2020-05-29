@@ -59,6 +59,14 @@ int test(
         printf("Третья форма глагола: \n ");
         scanf("%s", user.G3);
     }
+    if (!strcmp(user.G1, correct.G1) && !strcmp(user.G2, correct.G2)
+        && !strcmp(user.G3, correct.G3)) {
+        metka(correct.G1, correct.G2, correct.G3, correct.G4);
+        // printf("Всё верно!Так держать! \n ");
+        mark = 0;
+        next_verb = verbs_next(correct, user, count_attempt, count_rand, 0);
+        printf("next glagol_0=%d\n", next_verb);
+    }
     return 1;
 }
 void metka(char G1[30], char G2[30], char G3[30], char G4[30])
