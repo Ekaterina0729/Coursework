@@ -22,5 +22,11 @@ struct glag {
     char G3[100];
 };
 int read_verb(const string name);
-
+int test(
+        struct verb correct,
+        struct glag user,
+        int count_attempt,
+        int i,
+        int count_rand);
+void metka(char G1[30], char G2[30], char G3[30], char G4[30]);
 #endif
