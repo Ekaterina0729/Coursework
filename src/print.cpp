@@ -12,6 +12,13 @@ extern int count_verb, score;
 
 extern struct verb slova[];
 
+void give_up()
+{
+    puts("\n Тестирование окончено! ");
+    printf("Количество баллов %d \n", score);
+    rezult(score);
+    cin.get();
+}
 int check_verb(struct verb correct, struct glag user, int count_attempt, int i)
 {
     char button = 'y';
