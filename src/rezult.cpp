@@ -18,7 +18,7 @@ int rezult(int score)
     S << rez;
     printf("\n Результат вашего тестирвания %.1f процентов \n", rez);
     rez = 0;
-    printf("\n Хотите посмотреть словарь? y/n \n");
+    printf("\n Хотите посмотреть словарь выученных глаголов? y/n \n");
     scanf("%s", &button);
     switch (button) {
     case 'y':

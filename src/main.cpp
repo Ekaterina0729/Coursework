@@ -18,11 +18,13 @@ int main()
     while (1) {
         i = rand() % 100 + 1;
         read_verb("./src/Slovar.txt");
+        puts("__________________\n");
         puts(" 1 Начать тест");
         puts(" 2 Словарь");
-        puts(" 3 Начать заново ");
-        puts(" 4 Результат ");
+        puts(" 3 Начать заново");
+        puts(" 4 Результат");
         puts(" 0 Закончить");
+        puts("__________________\n");
         scanf("%d", &button);
         switch (button) {
         case 1:
@@ -35,7 +37,6 @@ int main()
             new_test("./src/Slovar2.txt", "./src/Rezultat.txt");
             break;
         case 4:
-            printf("%d\n", score);
             rezult(score);
             break;
         case 0:
