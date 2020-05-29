@@ -18,7 +18,36 @@ int test(
         int i,
         int count_rand)
 {
-    int next_verb, mark = 1;
+    int next_verb, mark = 1, l = 0;
+    struct glag g1;
+    ifstream S2("./src/Slovar2.txt", ios_base::in);
+    if (S2.is_open()) {
+        while (!S2.eof()) {
+            S2 >> slova[l].G1 >> slova[l].G2 >> slova[l].G3 >> slova[l].G4;
+            if ((!strcmp(slova[l].G1, correct.G1))
+                && (!strcmp(slova[l].G2, correct.G2))
+                && (!strcmp(slova[l].G3, correct.G3))
+                && (!strcmp(slova[l].G4, correct.G4))) {
+                i = rand() % 100;
+                count_rand++;
+                if (count_rand < 300)
+                    test(slova[i], g1, count_attempt, count_rand, i);
+                else {
+                    printf("Поздравляем! Ты выучил все глаголы!");
+                    return 2;
+                }
+                l++;
+            }
+        }
+    } else
+        printf("Error open file");
+    S2.close();
+    printf("%s \n", correct.G1);
+    printf("%s \n", correct.G2);
+    printf("%s \n", correct.G3);
+    printf("%s \n", user.G1);
+    printf("%s \n", user.G2);
+    printf("%s \n", user.G3);
     printf("Глагол: %s \n ", correct.G4);
     printf("Введите три формы глагола \n ");
 
