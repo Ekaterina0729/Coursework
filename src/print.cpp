@@ -61,7 +61,6 @@ int check_verb(struct verb correct, struct glag user, int count_attempt, int i)
         }
     } else {
         puts("У вас закончились попытки.");
-        // printf("poptka=%d\n",count_attempt);
         count_attempt = 1;
         verbs_next(correct, user, count_attempt, 0, 1);
     }
@@ -79,7 +78,6 @@ int verbs_next(
     int i, next_verb = 1;
     if (count_verb < 11) {
         count_verb++;
-        printf("glagol=%d\n", count_verb);
         puts("\n Продолжить или сдаться? y/n");
         scanf("%s", &button);
         switch (button) {

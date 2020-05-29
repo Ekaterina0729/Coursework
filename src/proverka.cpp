@@ -75,7 +75,6 @@ gl3:
         printf("Всё верно!Так держать! \n ");
         mark = 0;
         next_verb = verbs_next(correct, user, count_attempt, count_rand, 0);
-        printf("next glagol_0=%d\n", next_verb);
     } else {
         mark = 1;
         next_verb = 1;
