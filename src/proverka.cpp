@@ -66,7 +66,17 @@ int test(
         mark = 0;
         next_verb = verbs_next(correct, user, count_attempt, count_rand, 0);
         printf("next glagol_0=%d\n", next_verb);
+    } else {
+        mark = 1;
+        next_verb = 1;
     }
+    if (next_verb) {
+        // printf("next glagol_1=%d\n", next_verb);
+        mark = 1;
+        count_attempt = check_verb(correct, user, count_attempt, i);
+    }
+    count_verb = 1;
+    score = 150;
     return 1;
 }
 void metka(char G1[30], char G2[30], char G3[30], char G4[30])
