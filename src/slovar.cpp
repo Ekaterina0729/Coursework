@@ -41,8 +41,11 @@ void dictionary_learn_verb()
 {
     int i = 0;
     char button;
+
     int j = read_verb("./src/Slovar2.txt");
     j--;
+    if (j == 0)
+        printf("\nВы не выучили ни одного глагола!\n");
     for (i = 0; i < j; i++) {
         printf("  %10s  %10s  %10s %10s \n",
                slova[i].G1,
@@ -52,5 +55,4 @@ void dictionary_learn_verb()
     }
     printf("\n Введите любой символ для выхода в меню \n");
     scanf("%s", &button);
-
 }
