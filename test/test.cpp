@@ -20,6 +20,15 @@ TEST_CASE("REZULT")
     CHECK(rezult(-10, slova) == 0);
     CHECK(rezult(50, slova) == 0);
 }
+TEST_CASE("READ_VERB")
+{
+    struct verb slova[100];
+    CHECK(read_verb(" ghehj.txt", slova) == 1);
+    CHECK(read_verb("weefg", slova) == 1);
+    CHECK(read_verb("ahhkhkg", slova) == 1);
+    CHECK(read_verb("Slovar.txt", slova) >= 0);
+    CHECK(read_verb("Slovar2.txt", slova) >= 0);
+}
 TEST_CASE("NEWTEST")
 {
     CHECK(new_test("./src/tiyfvgkyt5.txt", "./src/ytfyt.txt") == 0);
