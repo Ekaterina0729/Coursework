@@ -32,4 +32,10 @@ void metka(char G1[30], char G2[30], char G3[30], char G4[30]);
 int data(char* g);
 void dictionary();
 void dictionary_learn_verb();
+int verbs_next(
+        struct verb correct,
+        struct glag user,
+        int count_attempt,
+        int count_rand,
+        int y);
 #endif
