@@ -11,9 +11,15 @@ int read_verb(const string name)
 {
     int i=0;
     ifstream S(name, ios_base::in);
-    while (!S.eof()) {
-        S >> slova[i].G1 >> slova[i].G2 >> slova[i].G3 >> slova[i].G4;
-        i++;
+    if (S.is_open()) {
+        while (!S.eof()) {
+            S >> slova[i].G1 >> slova[i].G2 >> slova[i].G3 >> slova[i].G4;
+            i++;
+        }
+    } else
+    {
+        printf("\n Error open file \n");
+        return 1;
     }
     S.close();
     return i;
