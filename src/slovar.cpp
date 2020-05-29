@@ -7,11 +7,11 @@ extern struct verb v1;
 extern struct verb slova[];
 
 using namespace std;
-int read_verb(const string name)
+int read_verb(const string name,struct verb slova[100])
 {
     int i = 0;
     ifstream S(name, ios_base::in);
-    if (S.is_open()) {
+        if (S.is_open()) {
         while (!S.eof()) {
             S >> slova[i].G1 >> slova[i].G2 >> slova[i].G3 >> slova[i].G4;
             i++;
@@ -42,7 +42,7 @@ void dictionary_learn_verb(struct verb slova[100])
     int i = 0;
     char button;
 
-    int j = read_verb("./src/Slovar2.txt");
+    int j = read_verb("./src/Slovar2.txt",slova);
     j--;
     if (j == 0)
         printf("\nВы не выучили ни одного глагола!\n");

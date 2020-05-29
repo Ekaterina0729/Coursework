@@ -9,6 +9,8 @@
 
 using namespace std;
 
+extern struct verb slova[100];
+
 int rezult(int score, struct verb slova[100])
 {
     char button;
