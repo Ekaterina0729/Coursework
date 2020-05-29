@@ -16,7 +16,7 @@ void give_up()
 {
     puts("\n Тестирование окончено! ");
     printf("Количество баллов %d \n", score);
-    rezult(score);
+    rezult(score, slova);
     cin.get();
 }
 int check_verb(struct verb correct, struct glag user, int count_attempt, int i)
@@ -61,7 +61,6 @@ int check_verb(struct verb correct, struct glag user, int count_attempt, int i)
         }
     } else {
         puts("У вас закончились попытки.");
-        // printf("poptka=%d\n",count_attempt);
         count_attempt = 1;
         verbs_next(correct, user, count_attempt, 0, 1);
     }

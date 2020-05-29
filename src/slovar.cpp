@@ -23,7 +23,7 @@ int read_verb(const string name)
     S.close();
     return i;
 }
-void dictionary()
+void dictionary(struct verb slova[100])
 {
     int i = 0;
     char button;
@@ -37,7 +37,7 @@ void dictionary()
     printf("\n Введите любой символ для выхода в меню \n");
     scanf("%s", &button);
 }
-void dictionary_learn_verb()
+void dictionary_learn_verb(struct verb slova[100])
 {
     int i = 0;
     char button;

@@ -30,8 +30,8 @@ int test(
         int count_rand);
 void metka(char G1[30], char G2[30], char G3[30], char G4[30]);
 int data(char* g);
-void dictionary();
-void dictionary_learn_verb();
+void dictionary(struct verb slova[100]);
+void dictionary_learn_verb(struct verb slova[100]);
 int verbs_next(
         struct verb correct,
         struct glag user,
@@ -39,7 +39,7 @@ int verbs_next(
         int count_rand,
         int y);
 int check_verb(struct verb correct, struct glag user, int count_attempt, int i);
-int rezult(int score);
+int rezult(int score, struct verb slova[100]);
 int new_test(const string fname_S2, const string fname_R);
 void give_up();
 #endif

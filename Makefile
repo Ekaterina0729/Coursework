@@ -2,10 +2,9 @@ g = g++
 CFLAGS = -Wall  -MP -MMD
 OBJECTS= ./build/main.o ./build/print.o ./build/date.o ./build/newtest.o ./build/proverka.o ./build/rezult.o ./build/slovar.o
 TOBJECTS= ./build/print.o ./build/date.o ./build/newtest.o ./build/proverka.o ./build/rezult.o ./build/slovar.o
-
 .PHONY: clean run all
 
-all:	./bin/main.exe 
+all: 		./bin/main.exe
 
 -include build/*.d
 
@@ -34,8 +33,12 @@ all:	./bin/main.exe
 		$(g) $(CFLAGS) -o ./build/slovar.o -c ./src/slovar.cpp
 
 
+
+
 run:
 		./bin/main
+
+
 #tests
 
 test: bin/test.exe test/main.cpp test/test.cpp
@@ -58,4 +61,3 @@ clean:
 		rm -rf build/src/*.o
 		rm -rf build/test/*.o
 		rm -rf bin/*
-
