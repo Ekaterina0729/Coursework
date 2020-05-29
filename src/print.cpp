@@ -33,18 +33,17 @@ int verbs_next(
             break;
         case 'n':
             score = score - ((11 - count_verb) * 15);
+            give_up();
             next_verb = 0;
             return next_verb;
             break;
         default:
             puts(" error");
         }
-        else
-        {
-            give_up();
-            if (y == 1)
-                next_verb = 0;
-        }
+    } else {
+        give_up();
+        if (y == 1)
+            next_verb = 0;
     }
     return next_verb;
 }
