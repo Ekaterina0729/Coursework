@@ -20,6 +20,15 @@ TEST_CASE("REZULT")
     CHECK(rezult(-10, slova) == 0);
     CHECK(rezult(50, slova) == 0);
 }
+TEST_CASE("READ_VERB")
+{
+    struct verb slova[100];
+    CHECK(read_verb(" ghehj.txt", slova) == 1);
+    CHECK(read_verb("weefg", slova) == 1);
+    CHECK(read_verb("ahhkhkg", slova) == 1);
+    CHECK(read_verb("Slovar.txt", slova) >= 0);
+    CHECK(read_verb("Slovar2.txt", slova) >= 0);
+}
 TEST_CASE("NEWTEST")
 {
     CHECK(new_test("./src/tiyfvgkyt5.txt", "./src/ytfyt.txt") == 0);
@@ -35,4 +44,12 @@ TEST_CASE("NEXTVERBS")
     int i=read_verb("./src/Slovar.txt",slova);
     CHECK(verbs_next(slova,user,5,0,1,150)==0);
     CHECK(verbs_next(slova, user, 5, 0, 1, 40) == 0);
+}
+TEST_CASE("CHECKVERB")
+{
+    struct glag user;
+    struct verb slova[100];
+    int i = read_verb("./src/Slovar.txt", slova);
+    CHECK(check_verb(slova, user, 5, 0, 150) == 1);
+    CHECK(check_verb(slova, user, 5, 0, 40) == 1);
 }
