@@ -42,12 +42,6 @@ int test(
     } else
         printf("Error open file");
     S2.close();
-    printf("%s \n", correct.G1);
-    printf("%s \n", correct.G2);
-    printf("%s \n", correct.G3);
-    printf("%s \n", user.G1);
-    printf("%s \n", user.G2);
-    printf("%s \n", user.G3);
     printf("Глагол: %s \n ", correct.G4);
     printf("Введите три формы глагола \n ");
 
@@ -66,4 +60,10 @@ int test(
         scanf("%s", user.G3);
     }
     return 1;
+}
+void metka(char G1[30], char G2[30], char G3[30], char G4[30])
+{
+    ofstream S("./src/Slovar2.txt", ios::app);
+    S << G1 << " " << G2 << " " << G3 << " " << G4 << "\n";
+    S.close();
 }
