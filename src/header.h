@@ -38,4 +38,5 @@ int verbs_next(
         int count_attempt,
         int count_rand,
         int y);
+int check_verb(struct verb correct, struct glag user, int count_attempt, int i);
 #endif
