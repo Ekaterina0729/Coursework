@@ -18,7 +18,8 @@ int test(
         int i,
         int count_rand)
 {
-    int next_verb, mark = 1, l = 0;
+    int next_verb, mark = 1;
+    int l = 0;
     struct glag g1;
     ifstream S2("./src/Slovar2.txt", ios_base::in);
     if (S2.is_open()) {
@@ -44,25 +45,34 @@ int test(
     S2.close();
     printf("Глагол: %s \n ", correct.G4);
     printf("Введите три формы глагола \n ");
-
+gl1:
     if (strcmp(user.G1, correct.G1)) {
         printf("Первая форма глагола: \n ");
         scanf("%s", user.G1);
+        if (data(user.G1) == 0) {
+            goto gl1;
+        }
     }
-
+gl2:
     if (strcmp(user.G2, correct.G2)) {
         printf("Вторая форма глагола: \n ");
         scanf("%s", user.G2);
+        if (data(user.G2) == 0) {
+            goto gl2;
+        }
     }
-
+gl3:
     if (strcmp(user.G3, correct.G3)) {
         printf("Третья форма глагола: \n ");
         scanf("%s", user.G3);
+        if (data(user.G3) == 0) {
+            goto gl3;
+        }
     }
     if (!strcmp(user.G1, correct.G1) && !strcmp(user.G2, correct.G2)
         && !strcmp(user.G3, correct.G3)) {
         metka(correct.G1, correct.G2, correct.G3, correct.G4);
-        // printf("Всё верно!Так держать! \n ");
+        printf("Всё верно!Так держать! \n ");
         mark = 0;
         next_verb = verbs_next(correct, user, count_attempt, count_rand, 0);
         printf("next glagol_0=%d\n", next_verb);
@@ -71,13 +81,15 @@ int test(
         next_verb = 1;
     }
     if (next_verb) {
-        // printf("next glagol_1=%d\n", next_verb);
         mark = 1;
         count_attempt = check_verb(correct, user, count_attempt, i);
     }
     count_verb = 1;
     score = 150;
-    return 1;
+    if (mark == 1)
+        return 0;
+    else
+        return 1;
 }
 void metka(char G1[30], char G2[30], char G3[30], char G4[30])
 {
