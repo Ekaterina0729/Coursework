@@ -33,6 +33,32 @@ int check_verb(struct verb correct, struct glag user, int count_attempt, int i)
     } else {
         printf("Третья форма глагола - отлично! \n");
     }
+    puts("\n Продолжить или сдаться? y/n");
+    printf("%s \n", user.G1);
+    printf("%s \n", user.G2);
+    printf("%s \n", user.G3);
+    scanf("%s", &button);
+    if (count_attempt < 5) {
+        count_attempt++;
+        switch (button) {
+        case 'y':
+            test(slova[i], user, count_attempt, i, 0);
+            break;
+        case 'n':
+            i = rand() % 100 + 1;
+            test(slova[i], user, count_attempt, i, 0);
+            score -= 5;
+            break;
+        default:
+            puts(" error");
+        }
+    } else {
+        puts("У вас закончились попытки.");
+        // printf("poptka=%d\n",count_attempt);
+        count_attempt = 1;
+        verbs_next(correct, user, count_attempt, 0, 1);
+    }
+    return count_attempt;
 }
 
 int verbs_next(
