@@ -30,5 +30,6 @@ int test(
         int count_rand);
 void metka(char G1[30], char G2[30], char G3[30], char G4[30]);
 int data(char* g);
-void dictionary()
+void dictionary();
+void dictionary_learn_verb();
 #endif
