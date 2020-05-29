@@ -12,6 +12,29 @@ extern int count_verb, score;
 
 extern struct verb slova[];
 
+int check_verb(struct verb correct, struct glag user, int count_attempt, int i)
+{
+    char button = 'y';
+    if (strcmp(user.G1, correct.G1)) {
+        printf("Первая форма глагола - неверно! Попробуйте ещё раз! \n");
+        score--;
+    } else {
+        printf("Первая форма глагола - отлично! \n");
+    }
+    if (strcmp(user.G2, correct.G2)) {
+        printf("Вторая форма глагола - неверно! Попробуйте ещё раз!\n");
+        score--;
+    } else {
+        printf("Вторая форма глагола - отлично! \n");
+    }
+    if (strcmp(user.G3, correct.G3)) {
+        printf("Третья форма глагола - неверно! Попробуйте ещё раз! \n");
+        score--;
+    } else {
+        printf("Третья форма глагола - отлично! \n");
+    }
+}
+
 int verbs_next(
         struct verb correct,
         struct glag user,
