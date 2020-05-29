@@ -40,3 +40,22 @@ void dictionary()
     case 'y':
         break;
 }
+void dictionary_learn_verb()
+{
+    int i = 0;
+    char button;
+    int j = read_verb("./src/Slovar2.txt");
+    j--;
+    for (i = 0; i < j; i++) {
+        printf("  %10s  %10s  %10s %10s \n",
+               slova[i].G1,
+               slova[i].G2,
+               slova[i].G3,
+               slova[i].G4);
+    }
+    printf("\n Выйти? (y) \n");
+    scanf("%s", &button);
+    switch (button)
+    case 'y':
+        break;
+}
