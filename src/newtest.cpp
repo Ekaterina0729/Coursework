@@ -21,11 +21,7 @@ int new_test(const string fname_S2, const string fname_R)
         printf("\n Error open file \n");
         return 1;
     }
-    printf("\n Выйти? (y) ");
+    printf("\n Введите любой символ для выхода в меню ");
     scanf("%s", &button);
-    switch (button)
-    case 'y': {
-        break;
-    }
     return 0;
 }
