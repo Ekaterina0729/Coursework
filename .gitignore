@@ -1,0 +1,11 @@
+/*.o
+/.main.c.swp
+/main.c~
+/#main.c#
+/*.html
+/*.exe
+build/src/*.o
+build/src/*.d
+build/test/*.o
+build/test/*.d
+/*.vscode
