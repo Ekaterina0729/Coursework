@@ -11,5 +11,10 @@ int read_verb(const string name)
 {
     int i=0;
     ifstream S(name, ios_base::in);
+    while (!S.eof()) {
+        S >> slova[i].G1 >> slova[i].G2 >> slova[i].G3 >> slova[i].G4;
+        i++;
+    }
+    S.close();
     return i;
 }
