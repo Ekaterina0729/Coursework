@@ -39,5 +39,6 @@ int verbs_next(
         int count_rand,
         int y);
 int check_verb(struct verb correct, struct glag user, int count_attempt, int i);
-int rezult(int score)
+int rezult(int score);
+int new_test(const string fname_S2, const string fname_R);
 #endif
