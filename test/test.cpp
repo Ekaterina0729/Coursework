@@ -45,3 +45,11 @@ TEST_CASE("NEXTVERBS")
     CHECK(verbs_next(slova,user,5,0,1,150)==0);
     CHECK(verbs_next(slova, user, 5, 0, 1, 40) == 0);
 }
+TEST_CASE("CHECKVERB")
+{
+    struct glag user;
+    struct verb slova[100];
+    int i = read_verb("./src/Slovar.txt", slova);
+    CHECK(check_verb(slova, user, 5, 0, 150) == 1);
+    CHECK(check_verb(slova, user, 5, 0, 40) == 1);
+}
