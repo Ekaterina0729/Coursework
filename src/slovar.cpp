@@ -34,11 +34,8 @@ void dictionary()
                slova[i].G3,
                slova[i].G4);
     }
-    printf("\n Выйти? (y) \n");
+    printf("\n Введите любой символ для выхода в меню \n");
     scanf("%s", &button);
-    switch (button)
-    case 'y':
-        break;
 }
 void dictionary_learn_verb()
 {
@@ -53,9 +50,7 @@ void dictionary_learn_verb()
                slova[i].G3,
                slova[i].G4);
     }
-    printf("\n Выйти? (y) \n");
+    printf("\n Введите любой символ для выхода в меню \n");
     scanf("%s", &button);
-    switch (button)
-    case 'y':
-        break;
+
 }
