@@ -28,3 +28,11 @@ TEST_CASE("NEWTEST")
     CHECK(new_test("./src/фыва.txt", "./src/нгшщз.txt") == 0);
     CHECK(new_test("./src/Slovar2.txt", "./src/Rezultat.txt") == 0);
 }
+TEST_CASE("NEXTVERBS")
+{
+    struct glag user;
+    struct verb slova[100];
+    int i=read_verb("./src/Slovar.txt",slova);
+    CHECK(verbs_next(slova,user,5,0,1,150)==0);
+    CHECK(verbs_next(slova, user, 5, 0, 1, 40) == 0);
+}
