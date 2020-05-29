@@ -39,6 +39,12 @@ int verbs_next(
         default:
             puts(" error");
         }
+        else
+        {
+            give_up();
+            if (y == 1)
+                next_verb = 0;
+        }
     }
     return next_verb;
 }
