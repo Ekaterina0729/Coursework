@@ -46,7 +46,7 @@ test: bin/test.exe test/main.cpp test/test.cpp
 
 
 bin/test.exe:  test/main.o test/test.o $(TOBJECTS) 
-		$(g)  ./build/date.o ./build/newtest.o ./build/slovar.o ./build/rezult.o ./build/print.o test/test.o test/main.o -o $@
+		$(g)  ./build/date.o ./build/newtest.o ./build/proverka.o ./build/print.o ./build/slovar.o ./build/rezult.o test/test.o test/main.o -o $@
 
 ./test/main.o: ./test/main.cpp ./src/header.h
 		$(g) -c $(CFLAGS) ./test/main.cpp -o $@
