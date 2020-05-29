@@ -20,3 +20,11 @@ TEST_CASE("REZULT")
     CHECK(rezult(-10, slova) == 0);
     CHECK(rezult(50, slova) == 0);
 }
+TEST_CASE("NEWTEST")
+{
+    CHECK(new_test("./src/tiyfvgkyt5.txt", "./src/ytfyt.txt") == 0);
+    CHECK(new_test("Slovar2.txt", "Rezultat.txt") == 0);
+    CHECK(new_test(" ", " ") == 0);
+    CHECK(new_test("./src/фыва.txt", "./src/нгшщз.txt") == 0);
+    CHECK(new_test("./src/Slovar2.txt", "./src/Rezultat.txt") == 0);
+}
