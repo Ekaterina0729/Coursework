@@ -9,3 +9,8 @@ build/src/*.d
 build/test/*.o
 build/test/*.d
 /*.vscode
+*.o
+*.d
+/bin/main
+/src/Rezultat.txt
+/test/testparty/
