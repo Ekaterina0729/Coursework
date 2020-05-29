@@ -4,8 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int count_verb = 1, score = 150;
-
+int score = 150;
 struct verb slova[100];
 
 int main()
@@ -17,7 +16,7 @@ int main()
     setlocale(LC_ALL, "Rus");
     while (1) {
         i = rand() % 100 + 1;
-        read_verb("./src/Slovar.txt");
+        read_verb("./src/Slovar.txt",slova);
         puts("__________________\n");
         puts(" 1 Начать тест");
         puts(" 2 Словарь");
@@ -28,7 +27,7 @@ int main()
         scanf("%d", &button);
         switch (button) {
         case 1:
-            test(slova[i], g1, count_attempt, i, 0);
+            test(slova, g1, count_attempt, i, 0,score);
             break;
         case 2:
             dictionary(slova);
@@ -37,7 +36,7 @@ int main()
             new_test("./src/Slovar2.txt", "./src/Rezultat.txt");
             break;
         case 4:
-            rezult(score, slova);
+            rezult(score,slova);
             break;
         case 0:
             return 0;
