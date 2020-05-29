@@ -31,13 +31,13 @@ int main()
             test(slova[i], g1, count_attempt, i, 0);
             break;
         case 2:
-            dictionary();
+            dictionary(slova);
             break;
         case 3:
             new_test("./src/Slovar2.txt", "./src/Rezultat.txt");
             break;
         case 4:
-            rezult(score);
+            rezult(score, slova);
             break;
         case 0:
             return 0;

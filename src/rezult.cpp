@@ -9,7 +9,7 @@
 
 using namespace std;
 
-int rezult(int score)
+int rezult(int score, struct verb slova[100])
 {
     char button;
     ofstream S("./src/Rezultat.txt", ios_base::app);
@@ -22,7 +22,7 @@ int rezult(int score)
     scanf("%s", &button);
     switch (button) {
     case 'y':
-        dictionary_learn_verb();
+        dictionary_learn_verb(slova);
         return 0;
         break;
     case 'n':
