@@ -81,7 +81,6 @@ int verbs_next(
     int i, next_verb = 1;
     if (count_verb < 11) {
         count_verb++;
-        printf("glagol=%d\n", count_verb);
         puts("\n Продолжить или сдаться? y/n");
         scanf("%s", &button);
         switch (button) {
